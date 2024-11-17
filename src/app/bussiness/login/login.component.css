@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #1e88e5; /* Azul oscuro del panel izquierdo */
+}
+
+.left-panel {
+  width: 40%;
+  background-color: #1e88e5; /* Azul oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(32, 21, 187); /* Para texto o iconos en el panel izquierdo */
+}
+
+.right-panel {
+  width: 60%;
+  background-color: #2b2e3c; /* Gris oscuro del panel derecho */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-card {
+  width: 80%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: none; /* Sin sombras para un diseño plano */
+  background-color: transparent; /* Fondo transparente para que coincida con el panel derecho */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; /* Blanco para el texto del título */
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white; /* Blanco para el texto del título */
+}
+
+.login-field {
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: #2b2e3c; /* Gris oscuro para el fondo de los campos */
+  color: white; /* Texto blanco */
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent;
+}
+
+button {
+  width: 100%;
+  background-color: #4caf50; /* Verde para el botón */
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #43a047; /* Verde más oscuro al pasar el ratón */
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.forgot-password a {
+  color: #f5f5f5; /* Blanco para el enlace */
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
