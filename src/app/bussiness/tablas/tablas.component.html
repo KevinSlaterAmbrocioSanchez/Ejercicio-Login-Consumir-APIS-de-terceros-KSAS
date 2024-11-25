@@ -21,7 +21,7 @@
           <thead>
             <tr>
               <th class="text-center">#</th>
-              <th class="text-center">Producto</th>
+              <th>Producto</th>
               <th class="text-center">Imagen</th>
               <th class="text-center">Acciones</th>
               <th class="text-center">Editar</th>
@@ -36,7 +36,7 @@
               </td>
               <td class="text-center">
                 <img
-                  [src]="product.image"
+                  [src]="product.thumbnail"
                   alt="Imagen del Producto"
                   class="rounded shadow"
                   style="width: 90px; height: 90px; object-fit: cover;"
@@ -54,22 +54,22 @@
               </td>
               <td class="text-center">
                 <button
-                  class="btn btn-primary btn-icon"
+                  class="btn btn-primary btn-sm"
                   [attr.data-bs-toggle]="'modal'"
                   [attr.data-bs-target]="'#editModal'"
                   (click)="openEditModal(product)"
                 >
-                <mat-icon>edit</mat-icon> <!-- Ícono de lápiz -->
+                  Editar
                 </button>
               </td>
               <td class="text-center">
                 <button
-                  class="btn btn-danger btn-icon"
+                  class="btn btn-danger btn-sm"
                   [attr.data-bs-toggle]="'modal'"
                   [attr.data-bs-target]="'#deleteModal'"
                   (click)="openDeleteModal(product)"
                 >
-                <mat-icon>delete</mat-icon> <!-- Ícono de bote de basura -->
+                  Eliminar
                 </button>
               </td>
             </tr>
@@ -119,10 +119,9 @@
       </div>
       <div class="modal-body text-center">
         <img
-          [src]="selectedProduct?.image"
+          [src]="selectedProduct?.thumbnail"
           alt="Producto"
           class="rounded shadow-sm mb-3"
-          style="width: 90px; height: 90px; object-fit: contain;"
         />
         <p class="text-muted">{{ selectedProduct?.description }}</p>
       </div>
@@ -222,7 +221,7 @@
       </div>
       <div class="modal-body">
         <p>
-          ¿Está seguro de que deseas eliminar el producto
+          ¿Estás seguro de que deseas eliminar el producto
           <strong>{{ productToDelete?.title }}</strong>?
         </p>
       </div>

@@ -3,14 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconModule } from '@angular/material/icon'; // Importa MatIconModule
-
 
 @Component({
   selector: 'app-tablas',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, FormsModule, MatIconModule],
+  imports: [CommonModule, HttpClientModule, FormsModule],
   templateUrl: './tablas.component.html',
   styleUrls: ['./tablas.component.css'],
 })
@@ -24,28 +21,19 @@ export class TablasComponent implements OnInit {
   productToDelete: any = null; // Producto seleccionado para eliminar
   searchTerm: string = ''; // Término de búsqueda
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
-
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.fetchProducts(); // Obtiene los productos al cargar el componente
   }
 
-  // Obtiene los productos desde la API de Fake Store
+  // Obtiene los productos desde la API
   fetchProducts(): void {
-    this.http.get<any[]>('https://api.escuelajs.co/api/v1/products').subscribe((response) => {
-      this.products = response.map(product => ({
-        id: product.id,
-        title: product.title,
-        description: product.description,
-        image: product.images && product.images.length > 0 ? product.images[0] : 'assets/default-image.png', // Imagen por defecto si no hay imágenes
-      }));
-      this.filteredProducts = this.products;
+    this.http.get<any>('https://dummyjson.com/products').subscribe((response) => {
+      this.products = response.products; // Lista completa de productos
+      this.filteredProducts = this.products; // Inicializa la lista filtrada
     });
   }
-  
-  
-  
 
   // Filtra los productos en base al término de búsqueda
   searchProducts(): void {
@@ -108,3 +96,6 @@ export class TablasComponent implements OnInit {
     this.productToDelete = null; // Limpia la referencia del producto eliminado
   }
 }
+
+
+

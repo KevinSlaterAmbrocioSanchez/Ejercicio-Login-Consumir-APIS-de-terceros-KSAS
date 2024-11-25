@@ -1,3 +1,4 @@
+/* Card principal */
 .custom-card {
     border-radius: 15px;
     overflow: hidden;
@@ -6,11 +7,11 @@
   }
   
   .custom-card-header {
-    background: linear-gradient(135deg, #a4508b, #5f0a87); /* Gradiente púrpura y fucsia */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     padding: 20px;
     text-align: center;
     color: white;
-  }  
+  }
   
   .custom-card-header h3 {
     font-family: 'Poppins', sans-serif;
@@ -35,12 +36,15 @@
   }
   
   .custom-table thead {
-    background: linear-gradient(90deg, #a4508b, #5f0a87); /* Gradiente similar */
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
     color: white;
   }
-  .custom-table tr:hover {
-    background-color: rgba(162, 72, 139, 0.2); /* Resaltado sutil */
-  }  
+  
+  .custom-table th {
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
   
   .custom-table td {
     padding: 15px;
@@ -54,18 +58,19 @@
   
   /* Botones */
   .custom-btn {
-    background-color: #5f0a87; /* Color de base púrpura oscuro */
+    background-color: #2575fc;
     color: white;
     border-radius: 50px;
     padding: 8px 20px;
     transition: all 0.3s ease-in-out;
   }
+  
   .custom-btn:hover {
-    background-color: #a4508b; /* Color fucsia de hover */
+    background-color: #6a11cb;
+    color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
-  
   
   /* Modal */
   .custom-modal {
@@ -73,7 +78,7 @@
   }
   
   .custom-modal-header {
-    background: linear-gradient(90deg, #5f0a87, #a4508b); /* Gradiente inverso */
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
     color: white;
     padding: 15px;
     border-bottom: none;
@@ -90,7 +95,7 @@
   }
   
   .custom-modal-footer button {
-    background: linear-gradient(90deg, #a4508b, #5f0a87); /* Gradiente coherente */
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
     border: none;
     color: white;
     border-radius: 50px;
@@ -174,65 +179,4 @@
     display: table-cell !important;
   }*/
 
-  /* Asegúrate de que los íconos dentro de los botones se vean centrados */
-.btn-icon {
-  width: 40px; /* Ancho fijo para consistencia */
-  height: 40px; /* Altura fija para consistencia */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%; /* Botones circulares */
-  padding: 0; /* Sin padding adicional */
-  font-size: 16px; /* Tamaño de los íconos */
-}
 
-.btn-icon i {
-  margin: 0; /* Asegúrate de que los íconos no tengan margen */
-}
-
-/* Colores personalizados */
-.btn-primary.btn-icon {
-  background-color: #007bff;
-  border-color: #007bff;
-  color: white;
-}
-
-.btn-primary.btn-icon:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
-.btn-danger.btn-icon {
-  background-color: #dc3545;
-  border-color: #dc3545;
-  color: white;
-}
-
-.btn-danger.btn-icon:hover {
-  background-color: #a71d2a;
-  border-color: #a71d2a;
-}
-/* Centrar los botones dentro de las celdas */
-.table td {
-  vertical-align: middle; /* Alineación vertical */
-  text-align: center; /* Alineación horizontal */
-  padding: 8px; /* Ajusta el espacio interior */
-}
-
-/* Ajusta el tamaño de los iconos */
-.btn-icon mat-icon {
-  font-size: 20px; /* Tamaño del icono */
-  vertical-align: middle; /* Asegura que el icono esté centrado verticalmente */
-}
-
-/* Para hacer los botones más pequeños y bien alineados */
-.btn-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px; /* Ajusta según el diseño */
-  border-radius: 50%; /* Opcional: Hace que los botones sean circulares */
-}
-
-
-  

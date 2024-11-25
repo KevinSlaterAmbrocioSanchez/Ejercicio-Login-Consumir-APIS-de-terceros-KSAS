@@ -4,7 +4,7 @@ import { MenuComponent } from './shared/components/menu/menu.component';
 import { DashboardComponent } from './bussiness/dashboard/dashboard.component';
 import { PerfilComponent } from './bussiness/perfil/perfil.component';
 import { TablasComponent } from './bussiness/tablas/tablas.component';
-//Hola
+
 export const routes: Routes = [
     {
         path: '',  // Ruta predeterminada para cargar HomeComponent al inicio
