@@ -1,51 +1,37 @@
 .container {
   display: flex;
-  height: 100vh;
-  background-color: #1e88e5; /* Azul oscuro del panel izquierdo */
-}
-
-.left-panel {
-  width: 40%;
-  background-color: #1e88e5; /* Azul oscuro */
-  display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(32, 21, 187); /* Para texto o iconos en el panel izquierdo */
+  height: 100vh;
+  background: linear-gradient(135deg, #8e44ad, #c0392b); /* Fondo degradado de morado a rosa intenso */
 }
 
 .right-panel {
-  width: 60%;
-  background-color: #2b2e3c; /* Gris oscuro del panel derecho */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Tamaño máximo del formulario */
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido para el formulario */
+  padding: 30px;
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+  text-align: center;
 }
 
 .example-card {
-  width: 80%;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: none; /* Sin sombras para un diseño plano */
-  background-color: transparent; /* Fondo transparente para que coincida con el panel derecho */
+  width: 100%;
+  background-color: transparent; /* Fondo transparente */
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-  color: white; /* Blanco para el texto del título */
+.icon {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .login-title {
   font-size: 28px;
   font-weight: bold;
-  color: white; /* Blanco para el texto del título */
-}
-
-.login-field {
-  width: 100%;
-  margin-bottom: 16px;
-  background-color: #2b2e3c; /* Gris oscuro para el fondo de los campos */
-  color: white; /* Texto blanco */
+  color: rgb(255, 255, 255); /* Texto blanco */
+  margin-bottom: 20px;
 }
 
 mat-form-field {
@@ -53,30 +39,117 @@ mat-form-field {
 }
 
 mat-form-field.mat-form-field-appearance-fill .mat-form-field-flex {
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.2); /* Transparente y con bordes sutiles */
+  border-radius: 10px;
+}
+
+mat-label, input {
+  color: rgb(209, 44, 138) !important; /* Texto blanco */
 }
 
 button {
   width: 100%;
-  background-color: #4caf50; /* Verde para el botón */
+  background: linear-gradient(135deg, #f7b42c, #fc575e); /* Botón con degradado naranja-rosa */
   color: white;
   font-weight: bold;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 30px; /* Botón redondeado */
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para realce */
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease; /* Transición al interactuar */
 }
 
 button:hover {
-  background-color: #43a047; /* Verde más oscuro al pasar el ratón */
+  transform: scale(1.05); /* Agrandamiento sutil */
+  background: linear-gradient(135deg, #e57373, #ff8a65); /* Tonos más intensos al pasar el ratón */
 }
 
 .forgot-password {
-  text-align: center;
-  margin-top: 16px;
+  text-align: right;
+  margin-top: 10px;
 }
 
 .forgot-password a {
-  color: #f5f5f5; /* Blanco para el enlace */
+  color: #dcdcdc; /* Gris claro para el enlace */
   text-decoration: none;
+  font-size: 14px;
 }
 
 .forgot-password a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .right-panel {
+    width: 100%; /* Adaptación para pantallas pequeñas */
+  }
+}
+
+input {
+  border: none; /* Elimina el borde blanco */
+  border-bottom: 2px solid #a4508b; /* Línea inferior con color púrpura */
+  background-color: transparent; /* Fondo transparente */
+  color: white; /* Color del texto */
+  font-family: 'Poppins', sans-serif; /* Fuente consistente */
+  outline: none; /* Elimina el contorno al hacer clic */
+  padding: 10px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-bottom: 2px solid #fca311; /* Color de énfasis (naranja claro) */
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Texto del placeholder más sutil */
+  font-style: italic;
+}
+
+button.show-password {
+  background: none; /* Fondo transparente */
+  border: none; /* Sin bordes */
+  color: #fca311; /* Color del ícono */
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+button.show-password:hover {
+  color: #a4508b; /* Cambia a púrpura al pasar el cursor */
+}
+
+
+.form-container {
+  background: linear-gradient(135deg, #5f0a87, #a4508b); /* Fondo gradiente */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+  width: 100%;
+  max-width: 400px;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #fca311, #a4508b); /* Gradiente del botón */
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
